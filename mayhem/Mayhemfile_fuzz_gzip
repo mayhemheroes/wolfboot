@@ -1,0 +1,8 @@
+project: wolfboot
+target: fuzz_gzip
+testsuite:
+  - file:///mayhem/mayhem/testsuite/fuzz_gzip
+cmds:
+  - cmd: /mayhem/fuzz_gzip
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_gzip.dict

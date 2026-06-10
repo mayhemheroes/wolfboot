@@ -1,0 +1,8 @@
+project: wolfboot
+target: fuzz_gpt
+testsuite:
+  - file:///mayhem/mayhem/testsuite/fuzz_gpt
+cmds:
+  - cmd: /mayhem/fuzz_gpt
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_gpt.dict
