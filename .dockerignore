@@ -1,0 +1,15 @@
+# .dockerignore for the commit-image build.
+# Goal: bake in the FULL repo (including .git history AND the lib/wolfssl
+# submodule worktree — both are needed), dropping only local build artifacts
+# and editor/OS cruft. Dev image, not minimal.
+
+# ── Build outputs / local cruft ──────────────────────────────────────────────
+# build.sh regenerates these under the repo + /mayhem at build time.
+mayhem/oracle_gpt
+mayhem-build/
+**/__pycache__/
+
+# ── Editor / OS noise ────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*~

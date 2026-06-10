@@ -1,0 +1,9 @@
+project: wolfboot
+target: fuzz_delta
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_delta/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_delta
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_delta.dict

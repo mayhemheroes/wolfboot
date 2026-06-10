@@ -1,0 +1,9 @@
+project: wolfboot
+target: fuzz_elf
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_elf/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_elf
+    libfuzzer: true
+    dictionary: /mayhem/mayhem/fuzz_elf.dict
